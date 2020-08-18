@@ -10,7 +10,7 @@ export default {
   name: 'App'
 }
 </script>
-
+//sadjkl
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
