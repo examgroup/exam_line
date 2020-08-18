@@ -9,6 +9,7 @@
 export default {
   name: 'App'
 }
+///sadassad
 </script>
 //sadjkl
 <style>
