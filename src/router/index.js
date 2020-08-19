@@ -1,18 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import index from '@/components/index'
-import person from '@/components/person'
-import indexui from '@/components/index-ui'
-import theme from '@/components/theme'
-import add from '@/components/addadmin'
-import updateadmin from '@/components/updateadmin'
-import login from '@/components/login'
+import HelloWorld from '@/components/admin/HelloWorld'
+import index from '@/components/admin/index'
+import person from '@/components/admin/person'
+import indexui from '@/components/admin/index-ui'
+import theme from '@/components/admin/theme'
+import add from '@/components/admin/addadmin'
+import updateadmin from '@/components/admin/updateadmin'
+import login from '@/components/admin/login'
 
 
 Vue.use(Router)
 
 export default new Router({
+  
   routes: [
     {
       path: '/login',
