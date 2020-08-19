@@ -8,12 +8,16 @@ import theme from '@/components/admin/theme'
 import add from '@/components/admin/addadmin'
 import updateadmin from '@/components/admin/updateadmin'
 import login from '@/components/admin/login'
+import updateFill from  '@/components/question/updateFill'
+import getAllFill from '@/components/question/index-fill'
+import saveFill from  '@/components/question/saveFill'
+
 
 
 Vue.use(Router)
 
 export default new Router({
-  
+
   routes: [
     {
       path: '/login',
@@ -37,7 +41,7 @@ export default new Router({
       component: add
 
     },
-    
+
     {
       path: '/indexui',
       name: 'indexui',
@@ -52,6 +56,21 @@ export default new Router({
       path:'/person',
       name:'person',
       component:person
-    }
+    },
+    {
+      path: '/updateFill/:questionId',
+      name: 'updateFill',
+      component: updateFill
+    },
+    {
+      path: '/getAllFill',
+      name: 'getAllFill',
+      component: getAllFill
+    },
+    {
+      path: '/saveFill',
+      name: 'saveFill',
+      component: saveFill
+    },
   ]
 })
