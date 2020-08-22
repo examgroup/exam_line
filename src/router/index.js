@@ -18,6 +18,12 @@ import updateMulti from  '@/components/question/updateMulti'
 import getAllMulti from '@/components/question/index-Mu'
 import saveMulti from  '@/components/question/saveMulti'
 import question from '@/components/question'
+import studentTable from  '@/components/student/studenttable'
+import studentAdd from '@/components/student/studentadd'
+import studentupdate from '@/components/student/studentupdate'
+import teacheradd from '@/components/teacher/teacheradd'
+import teachertable from '@/components/teacher/teachertable'
+import teacherupdate from '@/components/teacher/teacherupdate'
 
 Vue.use(Router)
 export default new Router({
@@ -112,5 +118,35 @@ export default new Router({
       name: 'question',
       component: question
     },
+    {
+    path: '/studentTable',
+  name: 'studentTable',
+  component: studentTable
+},
+{
+  path: '/studentAdd',
+    name: 'studentAdd',
+  component: studentAdd
+},
+{
+  path: '/studentupdate/:studentId',
+    name: 'studentupdate',
+  component: studentupdate
+},
+{
+  path: '/teacheradd',
+    name: 'teacheradd',
+  component: teacheradd
+},
+{
+  path: '/teachertable',
+    name: 'teachertable',
+  component: teachertable
+},
+{
+  path: '/teacherupdate/:teacherId',
+    name: 'teacherupdate',
+  component: teacherupdate
+}
   ]
 })

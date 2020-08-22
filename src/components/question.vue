@@ -26,6 +26,8 @@
               <el-menu-item index="1">填空题管理</el-menu-item>
               <el-menu-item index="2">判断题管理</el-menu-item>
               <el-menu-item index="3">选择题管理</el-menu-item>
+              <el-menu-item index="4">老师管理</el-menu-item>
+              <el-menu-item index="5">学生管理</el-menu-item>
             </el-menu>
           </div>
         </el-col>
@@ -51,7 +53,7 @@
     data(){
       return {
         searchCriteria: '',
-        breadcrumbItems: ['填空题'],
+        breadcrumbItems: [''],
       }
     },
 
@@ -73,6 +75,14 @@
           case '3':
             this.$router.push('/getAllMulti')
             this.breadcrumbItems  = ['选择题']
+            break;
+          case '4':
+            this.$router.push('/teachertable')
+            this.breadcrumbItems  = ['老师']
+            break;
+          case '5':
+            this.$router.push('/studentTable')
+            this.breadcrumbItems  = ['学生']
             break;
         }
       },
