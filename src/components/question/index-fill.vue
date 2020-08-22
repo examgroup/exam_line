@@ -1,23 +1,11 @@
 <template>
   <div>
     <el-container style="height: 100%; border: 1px solid #eee">
-      <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-        <el-menu :default-openeds="['1', '3']">
-          <el-submenu index="1">
-            <template slot="title"><i class="el-icon-message"></i>题库管理</template>
-            <el-menu-item-group>
-              <template slot="title">填空题列表</template>
-            </el-menu-item-group>
-          </el-submenu>
-        </el-menu>
-      </el-aside>
 
       <el-container>
         <el-header style="font-size: 20px">
-          <span style="text-align: center; ">填空题</span>
           <el-button type="text" @click="save" >添加填空题试题</el-button>
         </el-header>
-
   <el-table
     :data="tableData"
     stripe

@@ -11,11 +11,15 @@ import login from '@/components/admin/login'
 import updateFill from  '@/components/question/updateFill'
 import getAllFill from '@/components/question/index-fill'
 import saveFill from  '@/components/question/saveFill'
-
-
+import updateJudge from  '@/components/question/updateJudge'
+import getAllJudge from '@/components/question/index-judge'
+import saveJudge from  '@/components/question/saveJudge'
+import updateMulti from  '@/components/question/updateMulti'
+import getAllMulti from '@/components/question/index-Mu'
+import saveMulti from  '@/components/question/saveMulti'
+import question from '@/components/question'
 
 Vue.use(Router)
-
 export default new Router({
 
   routes: [
@@ -71,6 +75,42 @@ export default new Router({
       path: '/saveFill',
       name: 'saveFill',
       component: saveFill
+    },
+    {
+      path: '/updateJudge/:questionId',
+      name: 'updateJudge',
+      component: updateJudge
+    },
+    {
+      path: '/getAllJudge',
+      name: 'getAllJudge',
+      component: getAllJudge
+    },
+    {
+      path: '/saveJudge',
+      name: 'saveJudge',
+      component: saveJudge
+    },
+
+    {
+      path: '/updateMulti/:questionId',
+      name: 'updateMulti',
+      component: updateMulti
+    },
+    {
+      path: '/getAllMulti',
+      name: 'getAllMulti',
+      component: getAllMulti
+    },
+    {
+      path: '/saveMulti',
+      name: 'saveMulti',
+      component: saveMulti
+    },
+    {
+      path: '/question',
+      name: 'question',
+      component: question
     },
   ]
 })

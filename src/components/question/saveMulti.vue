@@ -7,8 +7,20 @@
       <el-form-item label="试题内容">
         <el-input v-model="formLabelAlign.question"></el-input>
       </el-form-item>
+      <el-form-item label="A">
+        <el-input v-model="formLabelAlign.answerA"></el-input>
+      </el-form-item>
+      <el-form-item label="B">
+        <el-input v-model="formLabelAlign.answerB"></el-input>
+      </el-form-item>
+      <el-form-item label="C">
+        <el-input v-model="formLabelAlign.answerC"></el-input>
+      </el-form-item>
+      <el-form-item label="D">
+        <el-input v-model="formLabelAlign.answerD"></el-input>
+      </el-form-item>
       <el-form-item label="正确答案">
-        <el-input v-model="formLabelAlign.answer"></el-input>
+        <el-input v-model="formLabelAlign.rightAnswer"></el-input>
       </el-form-item>
       <el-form-item label="题目解析">
         <el-input v-model="formLabelAlign.analysis"></el-input>
@@ -39,7 +51,11 @@
         formLabelAlign: {
           subject: '',
           question: '',
-          answer: '',
+          answerA: '',
+          answerB: '',
+          answerC: '',
+          answerD: '',
+          rightAnswer: '',
           analysis:'',
           score:'',
           level:'',
@@ -49,15 +65,15 @@
     },
     methods: {
       submitForm(formName){
-        axios.post("/api/saveFill",this.formLabelAlign).then(res=>{
+        axios.post("/api/saveMulti",this.formLabelAlign).then(res=>{
           if (res.data=="success"){
             alert("成功添加")
-            this.$router.push("/getAllFill")
+            this.$router.push("/getAllMulti")
           }
 
           if(res.data=="fail"){
             alert("添加失败")
-            this.$router.push("/getAllFill")
+            this.$router.push("/getAllMulti")
           }
         })
       }

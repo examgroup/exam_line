@@ -49,15 +49,15 @@
     },
     methods: {
       submitForm(formName){
-        axios.post("/api/saveFill",this.formLabelAlign).then(res=>{
+        axios.post("/api/saveJudge",this.formLabelAlign).then(res=>{
           if (res.data=="success"){
             alert("成功添加")
-            this.$router.push("/getAllFill")
+            this.$router.push("/getAllJudge")
           }
 
           if(res.data=="fail"){
             alert("添加失败")
-            this.$router.push("/getAllFill")
+            this.$router.push("/getAllJudge")
           }
         })
       }
