@@ -1,9 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/admin/HelloWorld'
-import index from '@/components/admin/index'
-import person from '@/components/admin/person'
-import indexui from '@/components/admin/index-ui'
+import RP from '@/components/admin/RP'
 import theme from '@/components/admin/theme'
 import add from '@/components/admin/addadmin'
 import updateadmin from '@/components/admin/updateadmin'
@@ -24,13 +21,37 @@ import studentupdate from '@/components/student/studentupdate'
 import teacheradd from '@/components/teacher/teacheradd'
 import teachertable from '@/components/teacher/teachertable'
 import teacherupdate from '@/components/teacher/teacherupdate'
-
+import exam from '@/components/exammanage/exam'
+import exammanage from '@/components/exammanage/exammanage'
+import message from '@/components/message/message'
 Vue.use(Router)
 export default new Router({
 
   routes: [
     {
-      path: '/login',
+      path: '/message',
+      name: 'message',
+      component: message
+    }
+    ,
+    {
+      path: '/exam/:examCode',
+      name: 'exam',
+      component: exam
+    },
+    {
+      path: '/exammanage',
+      name: 'exammanage',
+      component: exammanage
+    },
+    ,
+    {
+      path: '/RP',
+      name: 'RP',
+      component: RP
+    },
+    {
+      path: '/',
       name: 'login',
       component: login
 
@@ -41,7 +62,7 @@ export default new Router({
       component: updateadmin
     },
     {
-      path: '/',
+      path: '/theme',
       name: 'theme',
       component: theme
     },
@@ -50,22 +71,6 @@ export default new Router({
       name:'add',
       component: add
 
-    },
-
-    {
-      path: '/indexui',
-      name: 'indexui',
-      component: indexui
-    },
-    {
-      path: '/hellos',
-      name: 'helloworld',
-      component: HelloWorld
-    },
-    {
-      path:'/person',
-      name:'person',
-      component:person
     },
     {
       path: '/updateFill/:questionId',
